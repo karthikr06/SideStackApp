@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SideStack Social: all your chats in one window</title>
+<meta name="description" content="WhatsApp, Telegram, Discord, Gmail, ChatGPT and more, side by side in one Windows app. Separate profiles, notifications, downloads, alarms and themes. No account, no ads, no data collected.">
+<meta name="theme-color" content="#7c5cff">
+<meta property="og:title" content="SideStack Social">
+<meta property="og:description" content="All your chats and AI assistants side by side in one window, for Windows.">
+<meta property="og:image" content="assets/logo-512.png">
+<link rel="icon" href="assets/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="site.css">
+<script>
+  // Apply the saved light/dark choice before the page paints (no flash).
+  try { const t = localStorage.getItem('ss-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="30" height="30"><span>SideStack <b>Social</b></span></a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#features">Features</a>
+      <a href="#themes">Themes</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="icon-btn" id="mode" type="button" aria-label="Switch light or dark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= Hero ================= -->
+  <div class="hero" id="top">
+    <div class="wrap">
+      <img class="hero-logo" src="assets/logo.svg" alt="SideStack Social logo" width="88" height="88">
+      <span class="eyebrow">For Windows 10 and 11</span>
+      <h1>All your chats, <span class="grad">one window.</span></h1>
+      <p class="lead">WhatsApp, Telegram, Discord, Gmail, ChatGPT and more, side by side. Keep work and personal accounts apart, get every notification, and never hunt for a tab again.</p>
+      <div class="cta">
+        <a class="btn btn-primary store-link" href="#download">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+          <span class="two"><small class="store-small">Get it from the</small><span class="store-label">Microsoft Store</span></span>
+        </a>
+        <a class="btn btn-ghost" href="#features">See what's inside</a>
+      </div>
+      <p class="fine">No account. No ads. Nothing about you is collected.</p>
+
+      <!-- The app itself, right away: Dynamic glows with the "album art" of the song playing. -->
+      <div class="showcase" id="themes">
+      <div class="window dynamic" id="window" role="img" aria-label="SideStack Social: a sidebar of apps, a chat open in the middle, and the clock in the title bar, glowing with the colours of the song playing">
+        <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+        <div class="w-title">
+          <img class="w-logo" src="assets/logo.svg" alt="">
+          <span class="chip"><i></i> WhatsApp</span>
+          <span class="chip w-clock">14:05 · Thu 16 Oct <span class="note" id="nowPlaying">· ♪ Midnight City</span></span>
+          <span class="w-right"><span class="chip"><i></i> Personal</span><span class="w-dots"><span></span><span></span><span></span></span></span>
+        </div>
+        <div class="w-body">
+          <div class="w-side" id="side"></div>
+          <div class="w-page">
+            <div class="w-list">
+              <div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div><div><i></i><u></u></div>
+            </div>
+            <div class="w-chat">
+              <div class="bubble">Are we still on for tonight?</div>
+              <div class="bubble me">Yes! I'll book the table 🎉</div>
+              <div class="bubble">Perfect. Sending the address now</div>
+              <div class="bubble"><span class="typing"><span></span><span></span><span></span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="theme-picker" id="picker" aria-label="Try a theme"></div>
+      <p class="fine" style="text-align:center">Try a theme. <b>Dynamic</b> colours the window with the app you're in, and glows with the album art of the song playing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Features ================= -->
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Everything you talk on, finally together</h2>
+        <p>Built for Windows with the same Fluent look as the rest of your PC.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="5" height="16" rx="2"/><rect x="10" y="4" width="11" height="16" rx="2"/></svg></div>
+          <h3>One sidebar, every app</h3><p>Chats, mail, calls and AI assistants one click apart, with unread badges on each.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M3 20a5 5 0 0 1 10 0M11 12a5 5 0 0 1 10 0"/></svg></div>
+          <h3>Profiles</h3><p>Work and personal sign-ins kept apart. Add the same app twice for two accounts, or keep one fully isolated.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
+          <h3>Notifications that behave</h3><p>Windows notifications for every app, quiet hours, do not disturb, and a history you can search.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
+          <h3>Downloads, sorted</h3><p>Every file filed by app and profile, ready to drag straight into another chat.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M5 3 2 6M22 6l-3-3"/></svg></div>
+          <h3>Clock, alarms and timers</h3><p>A clock in the title bar with alarms, timers and reminders that ring even when the app is closed.</p></div>
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2a10 10 0 0 0 0 20c1 0 2-.8 2-2 0-.5-.2-1-.5-1.3-.3-.3-.5-.8-.5-1.2 0-1.1.9-2 2-2h2.3A5.5 5.5 0 0 0 22 10c0-4.4-4.5-8-10-8z"/></svg></div>
+          <h3>Themes, and Dynamic</h3><p>Twelve themes, from Midnight to Rose. Dynamic picks up each app's colour and the album art of your music.</p></div>
+      </div>
+
+      <div class="section-head" style="margin-top:56px">
+        <h2>Works with the apps you already use</h2>
+        <p>Each app is the service's own website, so everything works as it does in your browser.</p>
+      </div>
+      <div class="apps" id="apps"></div>
+    </div>
+  </section>
+
+  <!-- ================= Privacy ================= -->
+  <section id="privacy">
+    <div class="wrap">
+      <div class="privacy-band">
+        <div>
+          <h2>Private by design</h2>
+          <p>SideStack Social has no account, no servers, no ads and no analytics. The apps inside it are the companies' own websites, covered by their own privacy policies.</p>
+          <p><a class="btn btn-ghost" href="#privacy-policy" data-open-policy>Read the privacy policy</a></p>
+        </div>
+        <ul>
+          <li>Nothing about you is collected or sent anywhere.</li>
+          <li>Your apps, settings and sign-ins stay on your PC.</li>
+          <li>Camera, microphone and location only when you allow them, per app.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head"><h2>Questions</h2></div>
+      <div class="faq">
+        <details><summary>Which apps can I add?</summary>
+          <p>Messaging (WhatsApp, Telegram, Discord, Messenger, Google Messages, Google Chat, Slack), calls (Google Meet, Zoom), email (Gmail, Outlook, Proton Mail), social (Instagram, Facebook, X, LinkedIn), music (Spotify, YouTube Music) and AI assistants (ChatGPT, Claude, Gemini, Copilot, Perplexity). More are on the way.</p></details>
+        <details><summary>Can I use two accounts of the same app?</summary>
+          <p>Yes. Add the app again and put each copy in its own profile, or keep one Independent so it shares nothing with the others.</p></details>
+        <details><summary>Does it collect my data?</summary>
+          <p>No. SideStack Social has no servers of its own and sends nothing about you anywhere. The websites you use inside it work exactly as they do in a browser, under their own privacy policies.</p></details>
+        <details><summary>What do I need?</summary>
+          <p>Windows 10 (version 1809 or later) or Windows 11, on an x64 or Arm PC. Websites are shown by Microsoft Edge WebView2, which Windows keeps up to date.</p></details>
+        <details><summary>Is it made by WhatsApp, Google or the others?</summary>
+          <p>No. SideStack Social is independent and isn't affiliated with or endorsed by the services it shows.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Download ================= -->
+  <section id="download" class="download">
+    <div class="wrap">
+      <div class="card">
+        <img src="assets/logo.svg" alt="" width="72" height="72">
+        <h2>Get SideStack Social</h2>
+        <p class="store-note">On the Microsoft Store, with updates delivered automatically.</p>
+        <p style="margin-top:20px"><a class="btn btn-primary store-link" href="#download">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8.5v8.5H3zM12.5 3H21v8.5h-8.5zM3 12.5h8.5V21H3zM12.5 12.5H21V21h-8.5z"/></svg>
+          <span class="two"><small class="store-small">Get it from the</small><span class="store-label">Microsoft Store</span></span></a></p>
+        <p class="fine">By installing or using SideStack Social, you acknowledge that you have read and agree to its <a href="#privacy-policy" data-open-policy>privacy policy</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-row">
+      <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="24" height="24"><span>SideStack <b>Social</b></span></a>
+      <nav aria-label="Footer">
+        <a href="#privacy-policy" data-open-policy>Privacy policy</a>
+        <a class="support-link" href="#" hidden>Support</a>
+        <a class="store-link" href="#download">Microsoft Store</a>
+      </nav>
+    </div>
+    <p class="disclaimer">SideStack Social isn't affiliated with or endorsed by the companies whose websites it shows. Their names and trademarks belong to them and are used only to identify their services. © <span id="year">2026</span> SideStack.</p>
+  </div>
+</footer>
+
+<!-- ================= Privacy policy (popup; #privacy-policy opens it) ================= -->
+<dialog class="policy" id="privacy-policy" aria-labelledby="policy-title">
+  <div class="policy-head">
+    <h2 id="policy-title">Privacy policy</h2>
+    <button class="icon-btn" type="button" data-close-policy aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="policy-body">
+<!-- PRIVACY POLICY: generated from PrivacyPolicy.cs, do not edit by hand -->
+<p class="meta">Version 1 · effective 16 October 2026. This is the policy for the current version of the app; it only changes with an app update.</p>
+<p class="summary">SideStack doesn&#39;t collect any data about you. It has no account, no servers, no ads and no analytics. Everything it keeps (your apps, settings, notifications and sign-ins) stays on this PC. The apps you add are the companies&#39; own websites: what they collect is up to them and covered by their own privacy policies.</p>
+<h3>In short</h3>
+<p>SideStack does not collect, sell or share any personal data. It has no user accounts, no servers of its own, no advertising and no analytics or telemetry. Nothing you do in SideStack is sent to its developer.</p>
+<p>By installing or using SideStack, you acknowledge that you have read and understood this privacy policy and agree to it.</p>
+<h3>What SideStack keeps on your PC</h3>
+<p>To work, SideStack stores the following in your Windows user folder on this PC only: the apps you added and their settings, your profiles, notification history, the list of files you downloaded, the permissions you chose, and your alarms, timers and reminders.</p>
+<p>Each app&#39;s browser data (its sign-in, cookies and cache) is kept the same way a web browser keeps it, in SideStack&#39;s folder on this PC.</p>
+<p>Deleting an app or a profile in SideStack deletes its browser data. Uninstalling SideStack removes everything it stored. Files you downloaded stay in your Downloads folder.</p>
+<h3>The websites you use in SideStack</h3>
+<p>The apps in SideStack, such as WhatsApp, Gmail or Slack, are the companies&#39; own websites, shown as they would be in a web browser. You sign in to them directly, and SideStack never sees or stores your passwords.</p>
+<p>Those websites collect and use data under their own terms and privacy policies, not this one. SideStack has no control over what they collect and isn&#39;t responsible for it. Please read the policies of the services you use.</p>
+<p>SideStack isn&#39;t affiliated with or endorsed by the companies whose websites it shows. Their names and logos belong to them and are used only to identify their services.</p>
+<h3>Permissions</h3>
+<p>A website can use your camera, microphone, screen, location or notifications only when it asks and you allow it. Location is blocked unless you allow it for an app. You can change or reset these choices at any time in Settings, and Windows&#39; own privacy settings still apply.</p>
+<h3>Notifications, alarms and reminders</h3>
+<p>Notifications from your apps are shown through Windows and their history is kept on this PC. Alarms, timers and reminders are stored on this PC and ring through Windows notifications. None of them are sent anywhere.</p>
+<h3>Internet connections</h3>
+<p>SideStack connects only to the websites of the apps you add and the addresses they point it to: to show them, and to fetch their icons, album art and notification pictures.</p>
+<p>Websites are shown by Microsoft Edge WebView2, a part of Windows kept up to date by Microsoft. Like Microsoft Edge, it can check addresses with Microsoft Defender SmartScreen to protect you from harmful websites, under Microsoft&#39;s privacy statement. SideStack&#39;s updates come through the Microsoft Store, also under Microsoft&#39;s terms.</p>
+<h3>Error reports</h3>
+<p>If something goes wrong, SideStack writes an error log on this PC. It is never sent automatically. You can choose to share it when asking for help.</p>
+<h3>Children</h3>
+<p>SideStack is not directed at children under 13 and doesn&#39;t knowingly collect data from anyone, including children.</p>
+<h3>Changes to this policy</h3>
+<p>This policy may change in future versions of SideStack, for example if new features need it. The policy for the version you have installed never changes without an update: it is built into the app, and SideStack tells you when an update brings a new one.</p>
+<h3>Contact</h3>
+<p>Questions or feedback: use the SideStack page in the Microsoft Store.</p>
+<!-- END PRIVACY POLICY -->
+  </div>
+</dialog>
+
+<script src="site.js"></script>
+</body>
+</html>
