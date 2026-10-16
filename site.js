@@ -1,8 +1,8 @@
-// SideStack Social website. Fill in SITE once the Store listing and the support address exist.
+// SideStack Social website. Add storeUrl once the Store listing is live.
 const SITE = {
   // e.g. "https://apps.microsoft.com/detail/9XXXXXXXXXXX" (Partner Center shows it once the app is published).
   storeUrl: "",
-  supportEmail: "",
+  supportEmail: "karthik2006.dev@gmail.com",
 };
 
 (() => {
