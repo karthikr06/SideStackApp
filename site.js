@@ -1,4 +1,4 @@
-// SideStack Social website. Add storeUrl once the Store listing is live.
+// SideStack website. Add storeUrl once the Store listing is live.
 const SITE = {
   // e.g. "https://apps.microsoft.com/detail/9XXXXXXXXXXX" (Partner Center shows it once the app is published).
   storeUrl: "",
